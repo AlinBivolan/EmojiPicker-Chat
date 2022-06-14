@@ -18,6 +18,17 @@ export const Recent = [
   "🎤",
   "🔨",
 ];
+
+// export const Category = [
+//   { id: 0, title: "Smileys & Emotion" },
+//   { id: 0, title: "People & Body" },
+//   { id: 0, title: "Animals & Nature" },
+//   { id: 0, title: "Food & Drink" },
+//   { id: 0, title: "Travel & Places" },
+//   { id: 0, title: "Activities" },
+//   { id: 0, title: "Objects" },
+//   { id: 0, title: "Symbols" },
+// ];
 export const Category = [
   "Smileys & Emotion",
   "People & Body",
@@ -28,6 +39,7 @@ export const Category = [
   "Objects",
   "Symbols",
 ];
+
 export const GroupCat = [
   { cordonate: 0, title: "⏰" },
   { cordonate: 125, title: "😀" },

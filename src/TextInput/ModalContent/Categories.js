@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, createRef } from "react";
 
 import classes from "./Categories.module.css";
 import Groups from "./Groups";
@@ -9,12 +9,24 @@ import { Category, GroupCat } from "../../constants/arrays";
 const Categories = ({ recent, changeValueRecent, changeValue }) => {
   const [value, setValue] = useState("");
   const [filteredData, setFilteredData] = useState([]);
+  const categorySection = useRef([]);
   const emojis = useRef(null);
-  const scrollDown = (elementRef) => {
-    emojis.current.scrollTo({
-      top: elementRef,
-      behavior: "smooth",
-    });
+
+  categorySection.current = [...Array(Category.length).keys()].map(
+    (_, i) => categorySection.current[i] ?? createRef()
+  );
+
+  const scrollSmoothHandler = (index) => {
+    if (index > -1) {
+      categorySection.current[index].current.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      emojis.current.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   const handlerFilter = (text) => {
@@ -28,9 +40,11 @@ const Categories = ({ recent, changeValueRecent, changeValue }) => {
   return (
     <div>
       <div className={classes.container}>
-        {GroupCat.map((item) => (
+        {GroupCat.map((item, i) => (
           <Groups
-            handler={() => scrollDown(item.cordonate)}
+            handler={() => {
+              scrollSmoothHandler(i - 1);
+            }}
             title={item.title}
           />
         ))}
@@ -62,13 +76,18 @@ const Categories = ({ recent, changeValueRecent, changeValue }) => {
                 })}
               </>
             }
-            {Category.map((category) => (
-              <Emoji changeValue={changeValue} category={category} />
+            {Category.map((category, i) => (
+              <Emoji
+                categorySection={categorySection}
+                changeValue={changeValue}
+                category={category}
+                i={i}
+              />
             ))}
           </>
         ) : (
           <>
-            {filteredData.map((value) => {
+            {filteredData.map((value, key) => {
               return (
                 <span className={classes.filteredEmoji}>
                   <div
