@@ -5,6 +5,7 @@ import Groups from "./Groups";
 import Emoji from "./Emoji";
 import emojijson from "../../constants/emoji.json";
 import { Category, GroupCat } from "../../constants/arrays";
+import { strings } from "../../constants/strings";
 
 const Categories = ({ recent, changeValueRecent, changeValue }) => {
   const [value, setValue] = useState("");
@@ -52,14 +53,14 @@ const Categories = ({ recent, changeValueRecent, changeValue }) => {
       <input
         onChange={(e) => handlerFilter(e.target.value)}
         type="type"
-        placeholder="Search"
+        placeholder={strings.placeHolder.search}
         className={classes.search}
         value={value}
       />
       <span ref={emojis} className={classes.emoji_container}>
         {value === "" ? (
           <>
-            <h1 className={classes.category_name}>Recent Used</h1>
+            <h1 className={classes.category_name}>{strings.recentUsed}</h1>
             {
               <>
                 {recent.map((emoji) => {

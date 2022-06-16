@@ -7,7 +7,7 @@ const Emoji = ({ category, changeValue, i, categorySection }) => {
   return (
     <>
       <h1 className={classes.category_name} ref={categorySection.current[i]}>
-        {category}{" "}
+        {category}
       </h1>
       {emoji.map((icon) => {
         return (

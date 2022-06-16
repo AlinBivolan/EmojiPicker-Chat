@@ -5,6 +5,7 @@ import icon from "./../assets/Emoji_icon.svg";
 import send from "./../assets/Send.svg";
 import EmojiModal from "./EmojiModal";
 import { Recent } from "../constants/arrays";
+import { strings } from "../constants/strings";
 
 function Input() {
   const [emoji, setEmoji] = useState(false);
@@ -21,11 +22,11 @@ function Input() {
     setTextValue(textValue + emoji);
   };
 
-  const emojiHandler = () => {
+  const openEmojiModal = () => {
     setEmoji(true);
   };
 
-  const modalHandler = () => {
+  const closeEmojiModal = () => {
     setEmoji(false);
   };
 
@@ -33,7 +34,7 @@ function Input() {
     <div className={classes.pickerContainer}>
       {emoji && (
         <EmojiModal
-          onConfirm={modalHandler}
+          onConfirm={closeEmojiModal}
           changeValue={addEmoji}
           changeValueRecent={addEmojiFromRecent}
           recent={recentEmoji}
@@ -42,11 +43,11 @@ function Input() {
       <textarea
         onChange={(e) => setTextValue(e.target.value)}
         className={classes.display}
-        placeholder="Your Messages..."
+        placeholder={strings.placeHolder.input}
         value={textValue}
       />
       <div className={classes.buttons}>
-        <img className={classes.icon} src={icon} onClick={emojiHandler} />
+        <img className={classes.icon} src={icon} onClick={openEmojiModal} />
         <img className={classes.send} src={send} />
       </div>
     </div>
