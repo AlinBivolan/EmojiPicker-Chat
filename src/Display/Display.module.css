@@ -1,8 +1,0 @@
-@import '../theme/colors.css';
-.container {
-    margin: auto;
-    background-color: var(--backgroundLightGray);
-    border-radius: 0px 0px 15px 15px;
-    width: 95%;
-    height: 77vh;
-}

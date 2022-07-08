@@ -1,12 +1,10 @@
 import "./App.css";
-import Input from "./TextInput/Input.js";
-import Display from "./Display/Display";
+import Input from "./screens/Input.js";
 
 function App() {
 
   return (
     <div>
-      <Display />
       <Input />
     </div>
   );

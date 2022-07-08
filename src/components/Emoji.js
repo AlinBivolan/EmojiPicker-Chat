@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./Emoji.module.css";
-import emoji from "../../constants/emoji.json";
+import emoji from "../constants/emoji.json";
 
 const Emoji = ({ category, changeValue, i, categorySection }) => {
   return (

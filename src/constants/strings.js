@@ -5,3 +5,8 @@ export const strings = {
   },
   recentUsed: "Recent Used",
 };
+
+export const chatConstants = {
+  dot: ".",
+  emojiOpener: "❤️",
+};

@@ -19,6 +19,8 @@ export const Recent = [
   "🔨",
 ];
 
+export const reactEmojiList = ["❤️", "😆", "👿", "👍", "👎"];
+
 export const Category = [
   "Smileys & Emotion",
   "People & Body",
@@ -31,13 +33,13 @@ export const Category = [
 ];
 
 export const GroupCat = [
-  {title: "⏰" },
-  {title: "😀" },
-  {title: "👶" },
-  {title: "🐵" },
-  {title: "🍇" },
-  {title: "🌍" },
-  {title: "🎃" },
-  {title: "👓" },
-  {title: "🏧" },
+  { title: "⏰" },
+  { title: "😀" },
+  { title: "👶" },
+  { title: "🐵" },
+  { title: "🍇" },
+  { title: "🌍" },
+  { title: "🎃" },
+  { title: "👓" },
+  { title: "🏧" },
 ];

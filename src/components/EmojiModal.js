@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import classes from "./EmojiModal.module.css";
 import Modal from "./Modal.js";
-import Categories from "./ModalContent/Categories";
+import Categories from "./Categories";
 
 const EmojiModal = ({
   onConfirm,

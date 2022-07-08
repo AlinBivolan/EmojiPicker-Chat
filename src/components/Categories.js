@@ -3,9 +3,9 @@ import React, { useRef, useState, createRef } from "react";
 import classes from "./Categories.module.css";
 import Groups from "./Groups";
 import Emoji from "./Emoji";
-import emojijson from "../../constants/emoji.json";
-import { Category, GroupCat } from "../../constants/arrays";
-import { strings } from "../../constants/strings";
+import emojijson from "../constants/emoji.json";
+import { Category, GroupCat } from "../constants/arrays";
+import { strings } from "../constants/strings";
 
 const Categories = ({ recent, changeValueRecent, changeValue }) => {
   const [value, setValue] = useState("");
