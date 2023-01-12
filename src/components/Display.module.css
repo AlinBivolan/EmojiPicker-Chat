@@ -1,0 +1,53 @@
+@import "../theme/colors.css";
+.container {
+  margin: auto;
+  background-color: var(--backgroundLightGray);
+  border-radius: 0px 0px 15px 15px;
+  max-width: 95%;
+  height: 77vh;
+  overflow: auto;
+}
+.messageContent {
+  width: fit-content;
+  max-width: 70%;
+  margin: 0rem 1rem 0rem auto;
+  display: flex;
+}
+.messageReact {
+  font-size: 10px;
+  background-color: rgb(104, 102, 102);
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0rem 1.2rem 0rem auto;
+}
+.messageRight {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border-radius: 1.125rem 1.125rem 0 1.125rem;
+  min-height: 2.25rem;
+  width: fit-content;
+  max-width: 100%;
+}
+.messageDate {
+  cursor: pointer;
+  box-sizing: border-box;
+  color: #fff;
+  width: fit-content;
+  margin: 0rem 1rem 1rem auto;
+  font-size: 10px;
+}
+.chat {
+  max-height: 100px;
+  background-color: red;
+}
+.reactPicker {
+  display: flex;
+  cursor: pointer;
+  font-size: 25px;
+  background-color: rgb(104, 102, 102);
+  margin-right: 10px;
+  border-radius: 20px;
+  max-height: 38px;
+}

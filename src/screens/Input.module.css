@@ -1,0 +1,56 @@
+@import '../theme/colors.css';
+.icon {
+  cursor: pointer;
+  position: absolute;
+  bottom: 7vh;
+  left: 60px;
+}
+.send {
+  bottom: 7vh;
+  right: 60px;
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+}
+
+.display {
+  background-color: var(--backgroundLightGray);
+  display: block;
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  height: 14.6vh;
+  width: 95%;
+  border-radius: 15px 15px 15px 15px;
+  resize: none;
+  border: none;
+  color: var(--whitePure);
+  text-indent: 20px;
+  font-size: 20px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+.display:focus {
+    outline: none;
+}
+.display::placeholder {
+  font-family: "Poppins", sans-serif;
+  color: var(--whitePure);
+  font-weight: 800;
+  font-size: 20px;
+}
+/* width */
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 100px var(--backgroundLightGray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--whitePure);
+  border-radius: 0px;
+}

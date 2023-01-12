@@ -1,0 +1,33 @@
+@import '../theme/colors.css';
+.backdrop {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.container {
+  border-radius: 7px;
+  position: absolute;
+  margin-left: 10vw;
+  background-color: var(--whitePure);
+  top: 150px;
+  width: 440px;
+  height: 480px;
+}
+.categories {
+  border-radius: 7px;
+  position: absolute;
+  margin-left: 10vw;
+  background-color: var(--whitePure);
+  top: 220px;
+  width: 440px;
+  height: 480px;
+}
+
+@media only screen and (max-width: 546px) {
+  .container {
+    top: 100px;
+    margin-left: 7vw;
+  }
+}
